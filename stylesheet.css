@@ -1,0 +1,241 @@
+body {
+  background-color: #fafafa;
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.header {
+  padding: 30px;
+  text-shadow: 3px 3px #D2D4D6;
+  color: #393E46;
+}
+
+.weather-box {
+  font-size: 48px;
+  font-weight: bold;
+  background-color: #e8f1f5;
+  min-height: 600px;
+  width: 600px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.weather-box:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.temp-icon {
+  margin: 30px;
+}
+
+.thermometer {
+  display: inline-block;
+}
+
+.temp.hidden {
+  display: none;
+}
+
+.temp {
+  text-align: right;
+  font-size: 90px;
+  color: #004a7c;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  display: inline-block;
+  width: 60%;
+  margin-right: 5%;
+}
+
+.temp.animated {
+  animation-name: left-drive;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+.weather-description {
+  font-size: 25px;
+  font-style: italic;
+  color: #5b5b5b;
+}
+
+.location {
+  font-size: 34px;
+  color: #005691;
+  display: block;
+  margin: 50px;
+}
+
+.weather-icon {
+  text-align: left;
+  display: inline-block;
+  font-size: 97px;
+  color: #415865;
+  width: 28%;
+}
+
+.weather-icon.animated {
+  animation-name: right-drive;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+@keyframes right-drive {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes left-drive {
+  0% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.credits {
+  color: #F4EEEE;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  margin: 30px;
+}
+
+.credits a {
+  color: #005691;
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: none;
+  color: #00375e;
+  font-weight: bold;
+}
+
+#heart-symbol {
+  color: #D65F5F;
+  display: inline-block;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.onoffswitch {
+  text-align: left;
+  position: relative;
+  width: 116px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin: auto;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 41px;
+  padding: 0;
+  line-height: 41px;
+  font-size: 25px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "°F";
+  padding-left: 14px;
+  background-color: #EEEEEE;
+  color: #005691;
+}
+
+.onoffswitch-inner:after {
+  content: "°C";
+  padding-right: 14px;
+  background-color: #EEEEEE;
+  color: #456173;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 38px;
+  margin: 1.5px;
+  background: #456173;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 71px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+  background-color: #005691;
+}

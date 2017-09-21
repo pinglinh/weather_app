@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="https://rawgit.com/taw/76445a5e1e2cfa4e582e85e47618133e/raw/ab58cfa6cfec3b90a19e2838b3eea96523fdc586/weather%20font.css">
+  <script src="https://use.fontawesome.com/a990addf00.js"></script>
+</head>
+<body>
+
+  <div class="weather-box">
+    <p class="header">WEATHER</p>
+    <div class="onoffswitch">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+      <label class="onoffswitch-label" for="myonoffswitch">
+       <span class="onoffswitch-inner"></span>
+      <span class="onoffswitch-switch"></span>
+    </label>
+    </div>
+    <div class="temp-icon">
+
+      <div class="temp celsius">
+        <span class="fa fa-thermometer"></span> <span class="value"></span> °C</div>
+
+      <div class="temp fahrenheit hidden">
+        <span class="fa fa-thermometer"></span> <span class="value"></span> °F</div>
+
+
+      <div class="weather-icon">
+        <i class="wi" id="weather-icon"></i>
+      </div>
+    </div>
+    <div class="weather-description"></div>
+    <div class="location"><span class="fa fa-map-marker"></span> <span class="value"></span></div></div>
+  </div>
+
+  <div class="credits">
+    <span id="heart-symbol">&hearts;</span>
+    <span style="color: #C0D9E5">
+        <a href="http://www.pinglinh.com" target="_blank">pinglinh</a>
+      </span>
+</div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
